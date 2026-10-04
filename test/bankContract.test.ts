@@ -5,21 +5,14 @@ import{InsuranceContract} from "../src/class/InsuranceContract";
 describe("Deposit Contract", ()=>{
     let contract: DepositContract;
 
-    beforeEach(()=>{
-        contract = new DepositContract(50000, 2,'Lum-1', 'Nikita', false);
-        contract.activate()
-    })
-
-    afterEach(()=>{
-        contract.deactivate()
-        console.log('Deposit Contract deactivated');
-    })
-
     test('to check if contract is activated', ()=>{
+        contract = new DepositContract(100000, 3,'Lum-4', 'Nikita', false);
+        contract.activate()
         expect(contract.isActive).toBeTruthy();
     })
 
     test('calculate interest for 50000 at 2%', ()=>{
+        contract = new DepositContract(50000, 2,'Lum-5', 'Nikita', true);
         expect(contract.calculateInterest()).toBe(1000)
     })
 
@@ -52,7 +45,7 @@ describe("Insurance Contract", ()=>{
     let contract: InsuranceContract;
 
     beforeEach(()=>{
-        contract = new InsuranceContract('Property', 250,5, 'Lum-2','John', false);
+        contract = new InsuranceContract('Property', 250, 5, 'Lum-3','John', false);
         contract.activate()
     })
 
