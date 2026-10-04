@@ -1,14 +1,21 @@
 {
-  "name": "${PROJECT_NAME}",
+  "name": "bank-contract",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.14",
     "typescript": "^6.0.3"
   },
-  "private": true
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
 }
