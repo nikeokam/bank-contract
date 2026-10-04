@@ -1,6 +1,6 @@
-import{DepositContract} from "../src/class/DepositContract";
-import{LoanContract} from "../src/class/LoanContract";
-import{InsuranceContract} from "../src/class/InsuranceContract";
+import{ DepositContract } from "../src/class/DepositContract";
+import{ LoanContract } from "../src/class/LoanContract";
+import{ InsuranceContract } from "../src/class/InsuranceContract";
 
 describe("Deposit Contract", ()=>{
     let contract: DepositContract;
