@@ -5,8 +5,8 @@ export class BaseContract {
 
 
     constructor(contractId: string, clientName: string, isActive: boolean) {
-        this.contractId = 'contractId';
-        this.clientName = 'clientName';
+        this.contractId = contractId;
+        this.clientName = clientName;
         this.isActive = isActive;
     }
 

@@ -16,6 +16,12 @@ describe("Deposit Contract", ()=>{
         expect(contract.calculateInterest()).toBe(1000)
     })
 
+    test('check for contract ID and Client Name strings', ()=>{
+        contract = new DepositContract(50000, 2,'Lum-5', 'Nikita', true);
+        expect(contract.clientName). toBe('Nikita');
+        expect(contract.contractId).toBe('Lum-5');
+    })
+
 });
 
 describe("Loan Contract", ()=>{
@@ -31,6 +37,12 @@ describe("Loan Contract", ()=>{
         console.log('Loan Contract deactivated');
     })
 
+    test('check for contract ID and Client Name strings', ()=>{
+        expect(contract.clientName). toBe('John');
+        expect(contract.contractId).toBe('Lum-2');
+    })
+
+
     test('to check if contract is activated', ()=>{
         expect(contract.isActive).toBeTruthy();
     })
@@ -45,13 +57,18 @@ describe("Insurance Contract", ()=>{
     let contract: InsuranceContract;
 
     beforeEach(()=>{
-        contract = new InsuranceContract('Property', 250, 5, 'Lum-3','John', false);
+        contract = new InsuranceContract('Property', 250, 5, 'Lum-3','Anna', false);
         contract.activate()
     })
 
     afterEach(()=>{
         contract.deactivate()
         console.log('Insurance Contract deactivated');
+    })
+
+    test('check for contract ID and Client Name strings', ()=>{
+        expect(contract.clientName). toBe('Anna');
+        expect(contract.contractId).toBe('Lum-3');
     })
 
     test('to check if contract is activated', ()=>{
